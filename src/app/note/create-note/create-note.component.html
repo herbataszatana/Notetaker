@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/note"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add new Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Note's Name</ion-label>
+    <ion-input [(ngModel)]="name" type="text" placeholder="What's the note's title?"> </ion-input>
+  </ion-item>
+
+  <ion-item class="ion-no-padding">
+    <ion-label position="stacked">Price</ion-label>
+    <ion-input [(ngModel)]="body" type="text" placeholder="Please type in your note here...?"> </ion-input>
+  </ion-item>
+
+  <ion-button [disabled]="!isValidForm()" expand="block" (click)="createNote({name, body})">
+    Create note
+  </ion-button>
+</ion-content>
