@@ -7,18 +7,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding" class="note">
   <ion-item class="ion-no-padding">
     <ion-label position="stacked">Note's Name</ion-label>
     <ion-input [(ngModel)]="name" type="text" placeholder="What's the note's title?"> </ion-input>
   </ion-item>
 
   <ion-item class="ion-no-padding">
-    <ion-label position="stacked">Price</ion-label>
+    <ion-label position="stacked">Body</ion-label>
     <ion-input [(ngModel)]="body" type="text" placeholder="Please type in your note here...?"> </ion-input>
   </ion-item>
 
-  <ion-button [disabled]="!isValidForm()" expand="block" (click)="createNote({name, body})">
-    Create note
+  <ion-button color="light" expand="block" (click)="createNote({name, body})">
+    Add note
   </ion-button>
 </ion-content>
